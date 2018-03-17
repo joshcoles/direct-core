@@ -87,4 +87,10 @@
 
 .admin_main_view {
   flex: 1;
-  background-color: greenyellow; }
+  min-height: 100vh; }
+
+.action-icon {
+  margin: -9px; }
+
+.person-tile {
+  cursor: pointer; }

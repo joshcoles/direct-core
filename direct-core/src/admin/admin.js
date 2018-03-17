@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ListView from './list_view/list-view'
 import StateSlider from './state-slider/state-slider'
 
 
@@ -10,7 +11,7 @@ function ListItem(props){
 
 function NeedsList(props){
     const needs = props.needs;
-    const listItems = needs.map((need) => 
+    const listItems = needs.map((need) =>
         <ListItem key={need.id} value={need.title} icon={need.icon} />
     );
     return (
@@ -19,14 +20,30 @@ function NeedsList(props){
 }
 
 const needs = [
-    {id: 1, title: 'Physiological', icon: 'fas fa-medkit', color: ''}, 
-    {id: 2, title: 'Safety', icon: 'fas fa-medkit', color: ''}, 
-    {id: 3, title: 'Belonging', icon: 'fas fa-medkit', color: ''}, 
-    {id: 4, title: 'Esteem', icon: 'fas fa-medkit', color: ''}, 
-    {id: 5, title: 'Self-Actualization', icon: 'fas fa-medkit', color: ''} 
+    {id: 1, title: 'Physiological', icon: 'fas fa-medkit', color: ''},
+    {id: 2, title: 'Safety', icon: 'fas fa-medkit', color: ''},
+    {id: 3, title: 'Belonging', icon: 'fas fa-medkit', color: ''},
+    {id: 4, title: 'Esteem', icon: 'fas fa-medkit', color: ''},
+    {id: 5, title: 'Self-Actualization', icon: 'fas fa-medkit', color: ''}
 ];
 
+
 class Admin extends Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      minPercentage: 50
+    }
+  }
+
+  updatePercentage = (e) => {
+    var v = e.target.value
+    this.setState({
+      minPercentage: parseInt(e.target.value, 10)
+    });
+  }
+
   render() {
     return (
         <div className="admin">
@@ -42,7 +59,7 @@ class Admin extends Component {
                 </div>
             </div>
             <div className="admin_main_view">
-                Here mainview
+                <ListView minPercentage={this.state.minPercentage} />
             </div>
         </div>
     )

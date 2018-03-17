@@ -12,12 +12,12 @@
         margin: 0;
         width: 100px;
         height: 100px;
-        
+
         border: 1px solid black;
         border-radius: 50%;
-        
+
         text-align: center;
-        
+
         &:before{
             content: "";
             display: block;
@@ -25,7 +25,7 @@
             padding-bottom: 20px;
         }
     }
-    
+
     display: none;
 }
 
@@ -41,12 +41,12 @@
             flex-wrap: nowrap;
             justify-content: space-around;
             list-style: none;
-            
+
             li{
                 font-weight: bold;
                 font-size: .9rem;
                 text-align: center;
-                
+
                 span{
                     display: block !important;
                     padding: 5px;
@@ -54,13 +54,13 @@
                     height: 100px;
                     margin: 10px auto;
                     font-size: 3em;
-                    
+
                     border: 1px solid lightgray;
                     border-radius: 50%;
-                    
+
                     background-color: lightgray;
                     color: white;
-                    
+
                     &:before{
                         content: "";
                         display: block;
@@ -75,7 +75,7 @@
 //        background-color: lightgray;
         height: 30px;
         padding-top: 20px;
-        
+
         .rangeslider-horizontal{
             width: 80%;
             margin: 0px auto;
@@ -85,5 +85,13 @@
 
 .admin_main_view {
     flex: 1;
-    background-color: greenyellow;
+    min-height: 100vh;
+}
+
+.action-icon {
+    margin: -9px;
+}
+
+.person-tile {
+    cursor: pointer;
 }
