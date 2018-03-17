@@ -1,6 +1,9 @@
 .user {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  border: 2px solid $primary-color;
+  height: 100vh;
 }
 .data-container {
   border: 2px solid forestgreen;

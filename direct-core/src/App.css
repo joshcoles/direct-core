@@ -1,6 +1,9 @@
 .user {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 2px solid #AE2D30;
+  height: 100vh; }
 
 .data-container {
   border: 2px solid forestgreen;
@@ -19,8 +22,3 @@
     position: absolute;
     right: 20px;
     bottom: 20px; }
-
-.user {
-  box-sizing: border-box;
-  border: 2px solid #AE2D30;
-  height: 100vh; }
