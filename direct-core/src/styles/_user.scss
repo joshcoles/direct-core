@@ -5,22 +5,11 @@
   border: 2px solid $primary-color;
   height: 100vh;
 }
-.data-container {
+.display-container {
   border: 2px solid forestgreen;
-  flex: 2;
-}
-.fab-container {
-  flex: 1;
-  border: 2px solid tomato;
-  position: relative;
-  .main-fab {
-    border: 2px solid $secondary-color;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 2px solid red;
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
+  height: 67%;
+  .user-display {
+    height: 100%;
+    border: 2px solid purple;
   }
 }
