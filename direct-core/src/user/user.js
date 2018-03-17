@@ -33,7 +33,7 @@ class User extends Component {
         <div className="display-container">
           <Display data={this.state}/>
         </div>
-        <div className="fab-container">
+        <div className="fabs-container">
           <Fabs 
             data={this.state} 
             clickHandler={this.updateUserReport} 
