@@ -26,7 +26,7 @@
 .admin {
   display: flex;
   flex-direction: column;
-  height: 100vh; }
+  min-height: 100vh; }
 
 .admin_header {
   display: flex;
@@ -87,7 +87,9 @@
 
 .admin_main_view {
   flex: 1;
-  min-height: 100vh; }
+  min-height: 100vh;
+  background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/06/Desktop-Matrix-HD-Wallpapers-Images-Download.jpg");
+  background-repeat: repeat-y; }
 
 .action-icon {
   margin: -9px; }

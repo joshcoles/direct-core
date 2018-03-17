@@ -37,10 +37,10 @@ class Admin extends Component {
     }
   }
 
-  updatePercentage = (e) => {
-    var v = e.target.value
+  updatePercentage = (value) => {
     this.setState({
-      minPercentage: parseInt(e.target.value, 10)
+//      minPercentage: parseInt(e.target.value, 10)
+      minPercentage: value
     });
   }
 
@@ -55,7 +55,7 @@ class Admin extends Component {
                     <NeedsList needs={needs} />
                 </div>
                 <div className="percentile_slider">
-                   <StateSlider />
+                   <StateSlider changeHandler={this.updatePercentage}/>
                 </div>
             </div>
             <div className="admin_main_view">

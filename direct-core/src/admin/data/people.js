@@ -3,19 +3,19 @@ const PeopleData = [
       img: 'https://static.noticiasaominuto.com/stockimages/1920/naom_577c000228125.jpg',
       title: 'Human 1',
       id: 1,
-      percentage: 20
+      percentage: 10
     },
     {
       img: 'https://i.ytimg.com/vi/XYGzRB4Pnq8/maxresdefault.jpg',
       title: 'Human 2',
       id: 2,
-      percentage: 20
+      percentage: 10
     },
     {
       img: 'https://i.ytimg.com/vi/XYGzRB4Pnq8/maxresdefault.jpg',
       title: 'Human 3',
       id: 3,
-      percentage: 20
+      percentage: 10
     },
     {
       img: 'https://static.noticiasaominuto.com/stockimages/1920/naom_577c000228125.jpg',

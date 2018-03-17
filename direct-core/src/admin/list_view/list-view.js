@@ -30,9 +30,9 @@ class ListView extends Component {
   }
 
   componentWillReceiveProps(props){
-    this.state = {
+    this.setState({
       minPercentage: props.minPercentage
-    }
+    })
   }
 
   onTileClicked(event) {
@@ -43,6 +43,7 @@ class ListView extends Component {
   render() {
 
     let peopleData = PeopleData.filter(person => person.percentage < this.state.minPercentage)
+    peopleData = peopleData.sort((personOne, personTwo) => personOne.percentage - personTwo.percentage)
 
     return (
     <MuiThemeProvider>
