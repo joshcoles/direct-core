@@ -4,7 +4,12 @@ class Admin extends Component {
   render() {
     return (
       <div className="admin">
-      Admin here. sup?
+       <div className="admin-navbar">
+        Here navbar
+       </div>
+       <div className="admin-main-view">
+        Here mainview
+       </div>
       </div>
     )
   }

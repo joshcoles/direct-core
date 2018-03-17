@@ -1,2 +1,14 @@
 .admin {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-navbar {
+    width: 200px;
+    background-color: grey;
+}
+
+.admin-main-view {
+    flex: 1;
+    background-color: greenyellow;
 }
