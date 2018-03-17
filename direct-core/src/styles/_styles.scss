@@ -1,0 +1,8 @@
+@import 'variables';
+@import 'user';
+
+.user {
+  box-sizing: border-box;
+  border: 2px solid $primary-color;
+  height: 100vh;
+}

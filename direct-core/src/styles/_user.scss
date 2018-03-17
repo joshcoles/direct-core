@@ -1,26 +1,23 @@
 .user {
   display: flex;
-  flex-direction: column; }
-
+  flex-direction: column;
+}
 .data-container {
   border: 2px solid forestgreen;
-  flex: 2; }
-
+  flex: 2;
+}
 .fab-container {
   flex: 1;
   border: 2px solid tomato;
-  position: relative; }
-  .fab-container .main-fab {
-    border: 2px solid #5B636A;
+  position: relative;
+  .main-fab {
+    border: 2px solid $secondary-color;
     width: 60px;
     height: 60px;
     border-radius: 50%;
     border: 2px solid red;
     position: absolute;
     right: 20px;
-    bottom: 20px; }
-
-.user {
-  box-sizing: border-box;
-  border: 2px solid #AE2D30;
-  height: 100vh; }
+    bottom: 20px;
+  }
+}
