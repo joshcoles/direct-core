@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import StateSlider from './state-slider/state-slider'
+
 
 function ListItem(props){
     return (
@@ -36,7 +38,7 @@ class Admin extends Component {
                     <NeedsList needs={needs} />
                 </div>
                 <div className="percentile_slider">
-                    Slider Goes Here
+                   <StateSlider />
                 </div>
             </div>
             <div className="admin_main_view">
