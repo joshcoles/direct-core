@@ -13,7 +13,8 @@ class Report extends Component {
     switch (currentNeed) {
       case 'physiological':
         return (
-          <Physiological />
+          <Physiological 
+          data={this.props.data.needs[0]}/>
         )
         break;
       case 'safety':

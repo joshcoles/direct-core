@@ -9,7 +9,28 @@ class User extends Component {
 
     this.state = {
       currentNeed: '',
-      needs: ['physiological', 'safety', 'belonging', 'esteem', 'self desire']
+      needs: [
+        {
+        name: 'physiological',
+        items: ["Air", "Water", "Food", "Sleep", "Reproduction"]
+      },
+      {
+        name: 'belonging',
+        items: ["Friendship", "Intimacy", "Family", "Connection"]
+      },
+      {
+        name: 'safety',
+        items: ["Friendship", "Intimacy", "Family", "Connection"]
+      },
+      {
+        name: 'esteem',
+        items: ["Friendship", "Intimacy", "Family", "Connection"]
+      },
+      {
+        name: 'self desire',
+        items: ["Friendship", "Intimacy", "Family", "Connection"]
+      }
+      ]
     }
   }
 

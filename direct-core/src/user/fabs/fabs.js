@@ -12,7 +12,7 @@ class Fabs extends Component {
             this.props.data.needs.map((need, index) => {
               return (
                 <FabSatellite 
-                  category={need}
+                  category={need.name}
                   colorClass="fab-satellite severity-low"
                   key={index}
                   clickHandler={this.props.clickHandler}/>
