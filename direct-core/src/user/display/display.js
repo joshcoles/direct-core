@@ -1,35 +1,45 @@
 import React, { Component } from 'react';
+import Physiological from './needs/physiological/physiological';
+import Belonging from './needs/belonging/belonging';
+import Safety from './needs/safety/safety';
+import Esteem from './needs/esteem/esteem';
+import SelfDesire from './needs/self-desire/self-desire';
 
 class Report extends Component {
-  render() {
 
-    let beginning = false;
-    
-    if (beginning) {
-      return (
-        <h1>Welcome!</h1>
-      )
-    } else {
-      return (
-        <div className="user-report">
-          <div className="report-item">
-            <h2>Title 1</h2>
-            <p>Description of level (bar?)</p>
-          </div>
-          <div className="report-item">
-            <h2>Title 2</h2>
-            <p>Description of level (bar?)</p>
-          </div>
-          <div className="report-item">
-            <h2>Title 3</h2>
-            <p>Description of level (bar?)</p>
-          </div>
-          <div className="report-item">
-            <h2>Title 4</h2>
-            <p>Description of level (bar?)</p>
-          </div>
-        </div>
-      )
+  render() {
+    let currentNeed = this.props.data.currentNeed;
+
+    switch (currentNeed) {
+      case 'physiological':
+        return (
+          <Physiological />
+        )
+        break;
+      case 'safety':
+        return (
+          <Safety />
+        )
+        break;
+      case 'belonging':
+        return (
+          <Belonging />
+        )
+        break;
+      case 'esteem':
+        return (
+          <Esteem />
+        )
+        break;
+      case 'self desire':
+        return (
+          <SelfDesire />
+        )
+        break;
+      default: 
+        return (
+          <h1>Welcome!</h1>
+        )
     }
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Fab from './fab/fab';
+import Fabs from './fabs/fabs';
 import Display from './display/display';
 
 class User extends Component {
@@ -8,20 +8,36 @@ class User extends Component {
     super(props);
 
     this.state = {
-      currentNeed: "Love",
-      needs: ['Physiology']
+      currentNeed: '',
+      needs: ['physiological', 'safety', 'belonging', 'esteem', 'self desire']
     }
   }
 
+  updateUserReport = (e) => {
+    e.preventDefault();
+    this.setState({
+      currentNeed: e.target.id
+    });
+  }
+
+  resetCurrentNeed = (e) => {
+    e.preventDefault();
+    this.setState({
+      currentNeed: ''
+    });
+  }
 
   render() {
     return (
       <div className="user">
         <div className="display-container">
-          <Display />
+          <Display data={this.state}/>
         </div>
         <div className="fab-container">
-          <Fab data={this.state} />
+          <Fabs 
+            data={this.state} 
+            clickHandler={this.updateUserReport} 
+            resetCurrentNeed={this.resetCurrentNeed}/>
           <h1></h1>
         </div>
       </div>

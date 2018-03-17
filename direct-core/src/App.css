@@ -16,6 +16,10 @@
   height: 33%;
   border: 2px solid tomato;
   position: relative; }
+  .fab-container .fabs {
+    position: relative;
+    width: 100%;
+    height: 100%; }
   .fab-container .main-fab {
     border: 2px solid #5B636A;
     width: 70px;
@@ -32,7 +36,12 @@
     border: 2px solid blue;
     border-radius: 50%; }
     .fab-container .fab-satellite:nth-of-type(1) {
-      left: -60px; }
+      left: 0px; }
     .fab-container .fab-satellite:nth-of-type(2) {
-      left: -25px;
-      top: -55px; }
+      left: 50px; }
+    .fab-container .fab-satellite:nth-of-type(3) {
+      left: 100px; }
+    .fab-container .fab-satellite:nth-of-type(4) {
+      left: 150px; }
+    .fab-container .fab-satellite:nth-of-type(5) {
+      left: 200px; }
