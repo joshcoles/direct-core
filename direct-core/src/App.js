@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import User from './user/user';
+import Admin from './admin/admin';
 
 import './App.css';
 
@@ -7,7 +7,7 @@ class App extends Component {
 
   render() {
     return (
-      <User />
+      <Admin />
     );
   }
 }
