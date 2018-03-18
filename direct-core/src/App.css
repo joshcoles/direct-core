@@ -125,14 +125,14 @@
         width: 125px;
         height: 125px;
         margin: 0 auto 5px;
-        background-color: lightgray;
+        background-color: #7DD2DB;
         border-radius: 50%; }
       .admin_user .admin_user_view .stat .stat_label {
         color: white; }
   .admin_user .admin_user_navbar {
     align-self: flex-start;
     padding-top: 30px;
-    border-left: 1px solid lightgray;
+    border-left: 1px solid white;
     min-height: 100vh;
     height: 100%;
     color: white;
@@ -140,10 +140,12 @@
     .admin_user .admin_user_navbar .user_info {
       text-align: center; }
       .admin_user .admin_user_navbar .user_info .user_avatar {
-        position: relative; }
-        .admin_user .admin_user_navbar .user_info .user_avatar img {
-          border: 3px solid black;
-          border-radius: 50%; }
+        background-image: url("assets/images/user_avatar.jpg");
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        border-radius: 50%; }
       .admin_user .admin_user_navbar .user_info .user_name {
         margin-top: 10px;
         margin-bottom: 10px; }
@@ -161,7 +163,7 @@
           text-align: center;
           border: 1px solid;
           padding: 8px 10px;
-          margin-bottom: 10px;
+          margin-bottom: 20px;
           border-radius: 20px;
           background-color: #7DD2DB;
           border-color: #7DD2DB;
