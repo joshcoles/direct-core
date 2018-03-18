@@ -3,27 +3,31 @@ import PhysiologicalItems from './physiological-items/physiological-items';
 
 
 class Physiological extends Component {
-
-    render() {
+  
+  componentDidMount() {
+    this.props.activateButtons();
+  }
+  
+  render() {
+    
+    
+      let classes = this.props.data.classes;
+    
       return (
         <div className="user">
-          <h1>I'm Physiological</h1>
-          <div className="display-container">
+          <div className={`display-container display-${this.props.data.name}`}>
+
           {
             this.props.data.items.map((item, index) => {
               return (
                 <PhysiologicalItems
                   category={item}
-                  colorClass="needs-item"
+                  colorClass={classes}
                   key={index}
                 />
-                
               )
             })
           }
-            <PhysiologicalItems 
-            
-            />
           </div>
 
         </div>

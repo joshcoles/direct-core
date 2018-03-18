@@ -5,7 +5,8 @@ const physiologicalItems = (props) => (
 
   <button 
     className={props.colorClass} 
-    id={props.category} ></button>
+    id={props.category}>
+  </button>
   
 );
 

@@ -14,27 +14,36 @@ class Report extends Component {
       case 'physiological':
         return (
           <Physiological 
-          data={this.props.data.needs[0]}/>
+          data={this.props.data.needs[0]}
+          activateButtons={this.props.activateButtons}/>
         )
         break;
       case 'safety':
         return (
-          <Safety />
+          <Safety 
+          data={this.props.data.needs[1]}
+          activateButtons={this.props.activateButtons}/>
         )
         break;
       case 'belonging':
         return (
-          <Belonging />
+          <Belonging 
+          data={this.props.data.needs[2]}
+          activateButtons={this.props.activateButtons}/>
         )
         break;
       case 'esteem':
         return (
-          <Esteem />
+          <Esteem 
+          data={this.props.data.needs[3]}
+          activateButtons={this.props.activateButtons}/>
         )
         break;
       case 'self desire':
         return (
-          <SelfDesire />
+          <SelfDesire 
+          data={this.props.data.needs[4]}
+          activateButtons={this.props.activateButtons}/>
         )
         break;
       default: 
