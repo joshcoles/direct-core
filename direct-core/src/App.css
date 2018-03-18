@@ -101,41 +101,49 @@
   display: flex;
   align-items: center;
   min-height: 100vh;
-  font-size: 16px; }
+  font-size: 16px;
+  background-image: url("assets/images/background2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left -100px; }
   .admin_user .admin_user_view {
     display: flex;
     flex-wrap: wrap; }
     .admin_user .admin_user_view .stat {
-      width: 33.33333%;
+      width: 50%;
       text-align: center;
       margin-bottom: 30px; }
+      .admin_user .admin_user_view .stat.low_stat {
+        width: 60%;
+        margin-left: auto; }
+        .admin_user .admin_user_view .stat.low_stat .stat_level {
+          background-color: #D94152;
+          margin-top: 10px;
+          width: 160px;
+          height: 160px; }
       .admin_user .admin_user_view .stat .stat_level {
-        width: 150px;
-        height: 150px;
+        width: 125px;
+        height: 125px;
         margin: 0 auto 5px;
         background-color: lightgray;
         border-radius: 50%; }
+      .admin_user .admin_user_view .stat .stat_label {
+        color: white; }
   .admin_user .admin_user_navbar {
     align-self: flex-start;
     padding-top: 30px;
     border-left: 1px solid lightgray;
-    min-height: 100vh; }
+    min-height: 100vh;
+    height: 100%;
+    color: white;
+    clear: both; }
     .admin_user .admin_user_navbar .user_info {
       text-align: center; }
       .admin_user .admin_user_navbar .user_info .user_avatar {
         position: relative; }
         .admin_user .admin_user_navbar .user_info .user_avatar img {
           border: 3px solid black;
-          border-radius: 6px; }
-        .admin_user .admin_user_navbar .user_info .user_avatar .user_stat {
-          position: absolute;
-          top: 10px;
-          right: 20%;
-          background-color: #ef4545;
-          border-radius: 50%;
-          width: 25px;
-          height: 25px;
-          box-shadow: 1px 1px 0px grey; }
+          border-radius: 50%; }
       .admin_user .admin_user_navbar .user_info .user_name {
         margin-top: 10px;
         margin-bottom: 10px; }
@@ -155,14 +163,13 @@
           padding: 8px 10px;
           margin-bottom: 10px;
           border-radius: 20px;
-          background-color: lightgray;
-          border-color: lightgray;
-          color: black;
-          box-shadow: 1px 1px 2px black;
+          background-color: #7DD2DB;
+          border-color: #7DD2DB;
+          color: white;
           text-transform: uppercase; }
-          .admin_user .admin_user_navbar .needs_list ul li.active, .admin_user .admin_user_navbar .needs_list ul li:hover, .admin_user .admin_user_navbar .needs_list ul li:active, .admin_user .admin_user_navbar .needs_list ul li:focus {
-            background-color: gray;
-            border-color: gray;
+          .admin_user .admin_user_navbar .needs_list ul li.active {
+            background-color: #D94152;
+            border-color: #D94152;
             color: white;
             cursor: pointer; }
           .admin_user .admin_user_navbar .needs_list ul li span {

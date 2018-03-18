@@ -26,13 +26,13 @@ class AdminUser extends Component {
   render() {
     return ( 
         <div className="admin_user">
-            <div className="col-xs-9 admin_user_view">
+            <div className="col-xs-5 col-xs-offset-4 admin_user_view">
                 <SubNeedsList subNeeds={needs[0].subNeeds} />
             </div>
             <div className="col-xs-3 admin_user_navbar">
                 <div className="user_info">
                     <div className="user_avatar">
-                        <img src="https://placeimg.com/200/200/people/grayscale" />
+                        <img alt="" src="https://placeimg.com/200/200/people/grayscale" />
                         <div className="user_stat">
                         </div>
                     </div>
