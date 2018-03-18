@@ -15,6 +15,7 @@
         .stat{
             width: (100%/2);
             text-align: center;
+            margin-bottom: 80px;
             
             &.low_stat{
                 width: 60%;
@@ -24,39 +25,40 @@
                     margin-top: 10px;
                     width: 160px;
                     height: 160px;
-                    
-                    .circle-progress {
-                        stroke: $low-stat-color;
-                    }
-                    
-                    .circle-text{
-                        fill: $low-stat-color;
-                    }
                 }
                 
                 .stat_label{
+                    margin-top: -120px;
+                    
+                    .stat_title{
+                        color: $low-stat-color;
+                        font-size: 16px;
+                    }
+                    .stat_info{
+                        font-size: 3em;
+                    }
                 }
             }
             
             .stat_level{
                 width: 125px;
                 height: 125px;
-                margin: 0 auto 5px;
+                margin: 0 auto;
                 border-radius: 50%;
-                
-                .circle-progress {
-                    stroke: $blue;
-                }
-                
-                .circle-text{
-                    fill: $blue;
-                }
             }
             .stat_label{
-                color: white;
+                margin-top: -90px;
+                
+                .stat_title{
+                    color: $blue;
+                    font-size: 12px;
+                }
+                .stat_info{
+                    font-size: 2em;
+                    line-height: 1em;
+                    color: white;
+                }
             }
-            
-            margin-bottom: 30px;
         }
     }
     

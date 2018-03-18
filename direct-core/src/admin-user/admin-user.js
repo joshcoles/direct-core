@@ -9,11 +9,56 @@ const needs = [
         icon: 'fas fa-medkit', 
         color: '',
         subNeeds: [
-            {id: 1, title: 'Air', stat: '25', classes: 'low_stat', circle: '160'},
-            {id: 2, title: 'Water', stat: '60', classes: '', circle: '125'},
-            {id: 3, title: 'Food', stat: '75', classes: '', circle: '125'},
-            {id: 4, title: 'Shelter', stat: '100', classes: '', circle: '125'},
-            {id: 5, title: 'Sleep', stat: '98', classes: '', circle: '125'},
+            {
+                id: 1, 
+                title: 'Air', 
+                stat: '1.2L',
+                classes: 'low_stat', 
+                circle: {
+                    percentage: '25', 
+                    color: '#D94152'
+                }
+            },
+            {
+                id: 2, 
+                title: 'Water', 
+                stat: '1.5L',
+                classes: '', 
+                circle: {
+                    percentage: '60', 
+                    color: '#7DD2DB'
+                }
+            },
+            {
+                id: 3, 
+                title: 'Food', 
+                stat: '1.2', 
+                classes: '', 
+                circle: {
+                    percentage: '75',
+                    color: '#7DD2DB'
+                }
+            },
+            {
+                id: 4, 
+                title: 'Shelter',
+                stat: 'safe',
+                classes: '', 
+                circle: {
+                    percentage: '100', 
+                    color: '#7DD2DB'
+                }
+            },
+            {
+                id: 5, 
+                title: 'Sleep', 
+                classes: '', 
+                stat: '9',
+                circle: {
+                    percentage: '98', 
+                    color: '#7DD2DB'
+                }
+            },
         ],
         classes: 'active'
     },
