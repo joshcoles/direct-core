@@ -1,19 +1,43 @@
 import React, { Component } from 'react';
 
-function ListItem(props){
-    return (
-        <li><span className={props.value.toLowerCase()}><i className={props.icon}></i></span> {props.value}</li>
-    );
+class ListItem extends Component{
+
+    constructor(props) {
+        super(props);
+        this.onItemClicked = this.onItemClicked.bind(this);
+    }
+
+    onItemClicked(e) {
+        this.props.onItemClicked(this.props.id)
+    }
+
+    render() {
+        let text = this.props.title.toUpperCase()
+        return (
+            <li className="admin_needs-list-item" onClick={this.onItemClicked}><span className={this.props.title.toLowerCase()}><img src={this.props.icon}/></span> {text}</li>
+        )
+    }
 }
 
-function NeedsList(props){
-    const needs = props.needs;
-    const listItems = needs.map((need) =>
-        <ListItem key={need.id} value={need.title} icon={need.icon} />
-    );
-    return (
-        <ul>{listItems}</ul>
-    );
+class NeedsList extends Component {
+
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        const needs = this.props.needs;
+
+        const listItems = needs.map((need) => {
+            return (
+                <ListItem key={need.id} id={need.id} title={need.title} icon={need.icon} onItemClicked={this.props.onNeedItemClicked}/>
+                )
+            }
+        );
+        return (
+            <ul>{listItems}</ul>
+        );
+    }
 }
 
 export default NeedsList;

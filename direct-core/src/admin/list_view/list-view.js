@@ -42,8 +42,9 @@ class ListView extends Component {
 
   render() {
 
-    let peopleData = PeopleData.filter(person => person.percentage < this.state.minPercentage)
-    peopleData = peopleData.sort((personOne, personTwo) => personOne.percentage - personTwo.percentage)
+    let receivedId = this.props.selectedCategoryId;
+    let peopleData = PeopleData.filter(person => person.needs[receivedId].percentage < this.state.minPercentage)
+    peopleData = peopleData.sort((personOne, personTwo) => personOne.needs[receivedId].percentage - personTwo.needs[receivedId].percentage)
 
     return (
     <MuiThemeProvider>
@@ -55,16 +56,16 @@ class ListView extends Component {
           >
             {peopleData.map((person) => {
               let color = green600
-              if (person.percentage < 33)
+              if (person.needs[receivedId].percentage < 33)
                   color = red600
-              else if (person.percentage < 66)
+              else if (person.needs[receivedId].percentage < 66)
                 color = orange600
 
               return (
               <GridTile
               key={person.id}
               title={person.title}
-              actionIcon={<IconButton><Avatar className="action-icon" backgroundColor={color} /></IconButton>}
+              actionIcon={<IconButton><Avatar className="action-icon" backgroundColor={color}>{person.needs[receivedId].percentage}</Avatar></IconButton>}
               titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)"
               className="person-tile"
               onClick={this.onTileClicked}

@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
 .user {
   display: flex;
   flex-direction: column;
@@ -26,7 +27,10 @@
 .admin {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; }
+  min-height: 100vh;
+  background: url(/assets/admin_background.png) no-repeat center center fixed;
+  background-size: cover;
+  width: 100%; }
 
 .admin_header {
   display: flex;
@@ -68,9 +72,8 @@
         height: 100px;
         margin: 10px auto;
         font-size: 3em;
-        border: 1px solid lightgray;
-        border-radius: 50%;
-        background-color: lightgray;
+        border: 5px solid #7FA9AE;
+        border-radius: 74%;
         color: white; }
         .admin_navbar .needs_list ul li span:before {
           content: "";
@@ -87,12 +90,22 @@
 
 .admin_main_view {
   flex: 1;
-  min-height: 100vh;
-  background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/06/Desktop-Matrix-HD-Wallpapers-Images-Download.jpg");
-  background-repeat: repeat-y; }
+  min-height: 100vh; }
 
 .action-icon {
   margin: -9px; }
 
 .person-tile {
   cursor: pointer; }
+
+.admin_needs-list-item {
+  cursor: pointer;
+  color: white;
+  color: #FFFFFF;
+  font-family: "Roboto Mono";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px; }
+
+.admin_needs-list-item img {
+  height: 48px; }

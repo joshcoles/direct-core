@@ -10,7 +10,6 @@ class Horizontal extends Component {
     }
   }
 
-
   handleChange = value => {
     this.setSliderBackgroundColor()
     this.setState({
