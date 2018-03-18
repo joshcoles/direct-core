@@ -133,7 +133,7 @@ class User extends Component {
           classes: 'needs-item'
         },
         {
-          name: 'safety',
+          name: 'belonging',
           items: ["Friendship", "Intimacy", "Family", "Connection"],
           classes: 'needs-item'
         },
@@ -143,12 +143,12 @@ class User extends Component {
           classes: 'needs-item'
         },
         {
-          name: 'esteem',
+          name: 'belonging',
           items: ["Friendship", "Intimacy", "Family", "Connection"],
           classes: 'needs-item'
         },
         {
-          name: 'self desire',
+          name: 'belonging',
           items: ["Friendship", "Intimacy", "Family", "Connection"],
           classes: 'needs-item'
         }

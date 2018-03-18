@@ -21,9 +21,9 @@ class Report extends Component {
         break;
       case 'safety':
         return (
-          <Safety 
-          data={this.props.data.needs[1]}
-          activateButtons={this.props.activateButtons}/>
+          <Belonging
+          data={this.props.data.needs[2]}
+          activateButtons={this.props.activateButtons} />
         )
         break;
       case 'belonging':
@@ -35,16 +35,16 @@ class Report extends Component {
         break;
       case 'esteem':
         return (
-          <Esteem 
-          data={this.props.data.needs[3]}
-          activateButtons={this.props.activateButtons}/>
+          <Belonging
+          data={this.props.data.needs[2]}
+          activateButtons={this.props.activateButtons} />
         )
         break;
       case 'self desire':
         return (
-          <SelfDesire 
-          data={this.props.data.needs[4]}
-          activateButtons={this.props.activateButtons}/>
+          <Belonging
+          data={this.props.data.needs[2]}
+          activateButtons={this.props.activateButtons} />
         )
         break;
       default: 
