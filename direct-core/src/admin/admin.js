@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ListView from './list_view/list-view';
 import StateSlider from './state-slider/state-slider';
+
 import NeedsListComponent from '../needs_list_view/needs-list-view';
 import {NEEDS_ITEMS} from '../constants/needs';
 
