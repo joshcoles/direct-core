@@ -1,23 +1,7 @@
 import React, { Component } from 'react';
-import ListView from './list_view/list-view'
-import StateSlider from './state-slider/state-slider'
-
-
-function ListItem(props){
-    return (
-        <li><span className={props.value.toLowerCase()}><i className={props.icon}></i></span> {props.value}</li>
-    );
-}
-
-function NeedsList(props){
-    const needs = props.needs;
-    const listItems = needs.map((need) =>
-        <ListItem key={need.id} value={need.title} icon={need.icon} />
-    );
-    return (
-        <ul>{listItems}</ul>
-    );
-}
+import ListView from './list_view/list-view';
+import StateSlider from './state-slider/state-slider';
+import NeedsList from '../needs_list_view/needs-list-view';
 
 const needs = [
     {id: 1, title: 'Physiological', icon: 'fas fa-medkit', color: ''},
@@ -26,7 +10,6 @@ const needs = [
     {id: 4, title: 'Esteem', icon: 'fas fa-medkit', color: ''},
     {id: 5, title: 'Self-Actualization', icon: 'fas fa-medkit', color: ''}
 ];
-
 
 class Admin extends Component {
 
