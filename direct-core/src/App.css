@@ -117,16 +117,22 @@
         width: 60%;
         margin-left: auto; }
         .admin_user .admin_user_view .stat.low_stat .stat_level {
-          background-color: #D94152;
           margin-top: 10px;
           width: 160px;
           height: 160px; }
+          .admin_user .admin_user_view .stat.low_stat .stat_level .circle-progress {
+            stroke: #D94152; }
+          .admin_user .admin_user_view .stat.low_stat .stat_level .circle-text {
+            fill: #D94152; }
       .admin_user .admin_user_view .stat .stat_level {
         width: 125px;
         height: 125px;
         margin: 0 auto 5px;
-        background-color: #7DD2DB;
         border-radius: 50%; }
+        .admin_user .admin_user_view .stat .stat_level .circle-progress {
+          stroke: #7DD2DB; }
+        .admin_user .admin_user_view .stat .stat_level .circle-text {
+          fill: #7DD2DB; }
       .admin_user .admin_user_view .stat .stat_label {
         color: white; }
   .admin_user .admin_user_navbar {
@@ -176,3 +182,20 @@
             cursor: pointer; }
           .admin_user .admin_user_navbar .needs_list ul li span {
             display: none; }
+
+.circle-background,
+.circle-progress {
+  fill: none; }
+
+.circle-background {
+  stroke: #ddd; }
+
+.circle-progress {
+  stroke: red;
+  stroke-linecap: round;
+  stroke-linejoin: round; }
+
+.circle-text {
+  font-size: 1em;
+  font-weight: bold;
+  fill: red; }

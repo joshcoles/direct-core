@@ -9,11 +9,11 @@ const needs = [
         icon: 'fas fa-medkit', 
         color: '',
         subNeeds: [
-            {id: 1, title: 'Air', stat: '', classes: 'low_stat'},
-            {id: 2, title: 'Water', stat: '', classes: ''},
-            {id: 3, title: 'Food', stat: '', classes: ''},
-            {id: 4, title: 'Shelter', stat: '', classes: ''},
-            {id: 5, title: 'Sleep', stat: '', classes: ''},
+            {id: 1, title: 'Air', stat: '25', classes: 'low_stat', circle: '160'},
+            {id: 2, title: 'Water', stat: '60', classes: '', circle: '125'},
+            {id: 3, title: 'Food', stat: '75', classes: '', circle: '125'},
+            {id: 4, title: 'Shelter', stat: '100', classes: '', circle: '125'},
+            {id: 5, title: 'Sleep', stat: '98', classes: '', circle: '125'},
         ],
         classes: 'active'
     },

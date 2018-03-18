@@ -21,10 +21,17 @@
                 margin-left: auto;
                 
                 .stat_level{
-                    background-color: $low-stat-color;
                     margin-top: 10px;
                     width: 160px;
                     height: 160px;
+                    
+                    .circle-progress {
+                        stroke: $low-stat-color;
+                    }
+                    
+                    .circle-text{
+                        fill: $low-stat-color;
+                    }
                 }
                 
                 .stat_label{
@@ -35,8 +42,15 @@
                 width: 125px;
                 height: 125px;
                 margin: 0 auto 5px;
-                background-color: $blue;
                 border-radius: 50%;
+                
+                .circle-progress {
+                    stroke: $blue;
+                }
+                
+                .circle-text{
+                    fill: $blue;
+                }
             }
             .stat_label{
                 color: white;
