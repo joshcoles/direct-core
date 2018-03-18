@@ -23,22 +23,27 @@ class ListView extends Component {
     super(props);
 
     this.state = {
-      minPercentage: props.minPercentage
+      minPercentage: props.minPercentage,
+        view : props.onTileClicked
+        
     }
 
-    this.onTileClicked = this.onTileClicked.bind(this);
+//    this.onTileClicked = this.onTileClicked.bind(this);
   }
 
   componentWillReceiveProps(props){
     this.setState({
-      minPercentage: props.minPercentage
+      minPercentage: props.minPercentage,
+        view: props.onTileClicked
     })
   }
 
-  onTileClicked(event) {
-    event.preventDefault();
-    alert('Hey');
-  }
+//  onTileClicked(event) {
+//    event.preventDefault();
+//    this.setState({
+//        view: "adminUser"
+//    })
+//  }
 
   render() {
 
@@ -68,7 +73,7 @@ class ListView extends Component {
               actionIcon={<IconButton><Avatar className="action-icon" backgroundColor={color}>{person.needs[receivedId].percentage}</Avatar></IconButton>}
               titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)"
               className="person-tile"
-              onClick={this.onTileClicked}
+              onClick={console.log(this.props)}
               >
                 <img src={person.img} />
               </GridTile>

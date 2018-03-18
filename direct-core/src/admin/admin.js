@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AdminUser from '../admin-user/admin-user';
 import ListView from './list_view/list-view';
 import StateSlider from './state-slider/state-slider';
 
@@ -12,8 +13,10 @@ class Admin extends Component {
     this.state = {
       minPercentage: 50,
       selectedCategoryId: 1,
+        view: ""
     }
     this.needItemClicked = this.needItemClicked.bind(this);
+      this.onTileClicked = this.onTileClicked.bind(this);
   }
 
   updatePercentage = (value) => {
@@ -28,28 +31,43 @@ class Admin extends Component {
     });
   }
 
+    onTileClicked() {
+        debugger;
+        this.setState({
+            view: "adminUser"
+        })
+    }
+   
+
   render() {
 //    const needs = NEEDS_ITEMS.map(need => {
 //      need.icon = 'fas fa-medkit'
 //    })
-    return (
-        <div className="admin">
-            <div className="admin_header">
-                <div className="header">Core</div>
-            </div>
-            <div className="admin_navbar">
-                <div className="needs_list">
-                    <NeedsListComponent needs={NEEDS_ITEMS} onNeedItemClicked={this.needItemClicked}/>
+    if (this.state.view === "adminUser") {
+        return <AdminUser />
+    }
+    else{
+        return (
+            <div className="admin">
+                <div className="admin_header">
+                    <div className="header">Core</div>
                 </div>
-                <div className="percentile_slider">
-                   <StateSlider changeHandler={this.updatePercentage}/>
+                <div className="admin_navbar">
+                    <div className="needs_list">
+                        <NeedsListComponent needs={NEEDS_ITEMS} onNeedItemClicked={this.needItemClicked}/>
+                    </div>
+                    <div className="percentile_slider">
+                       <StateSlider changeHandler={this.updatePercentage}/>
+                    </div>
+                </div>
+                <div className="admin_main_view">
+                    <ListView minPercentage={this.state.minPercentage} changeHandler={this.onTileClicked} selectedCategoryId={this.state.selectedCategoryId} />
+
                 </div>
             </div>
-            <div className="admin_main_view">
-                <ListView minPercentage={this.state.minPercentage} selectedCategoryId={this.state.selectedCategoryId} />
-            </div>
-        </div>
-    )
+        );
+      
+    }
   }
 }
 
