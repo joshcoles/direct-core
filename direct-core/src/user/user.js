@@ -14,7 +14,7 @@ class User extends Component {
       needs: [
       {
         name: 'physiological',
-        items: ["Air", "Water", "Food", "Sleep", "Reproduction"],
+        items: ["Air", "Sleep", "Reproduction", "Water", "Food"],
         classes: 'needs-item'
       },
       {

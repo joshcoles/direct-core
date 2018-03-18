@@ -4,6 +4,7 @@ import Belonging from './needs/belonging/belonging';
 import Safety from './needs/safety/safety';
 import Esteem from './needs/esteem/esteem';
 import SelfDesire from './needs/self-desire/self-desire';
+import Landing from './landing/landing';
 
 class Report extends Component {
 
@@ -48,7 +49,7 @@ class Report extends Component {
         break;
       default: 
         return (
-          <h1>Welcome!</h1>
+          <Landing />
         )
     }
   }

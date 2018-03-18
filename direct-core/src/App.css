@@ -4,15 +4,50 @@
   box-sizing: border-box;
   height: 100vh; }
 
+.landing-page {
+  background-image: url("assets/images/background.png");
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s; }
+  .modal img {
+    max-width: 80%;
+    height: auto;
+    transition: all 1.2s; }
+
+.timestamp {
+  position: absolute;
+  left: 20px;
+  top: 20px; }
+
+.page-title {
+  position: absolute;
+  right: 20px;
+  top: 0; }
+
 .display-container {
   height: 100%; }
   .display-container .user-display {
     height: 100%; }
   .display-container .needs-item {
+    background-size: cover;
+    background-color: transparent;
     position: absolute;
-    width: 40px;
-    height: 40px;
-    background-color: #3E87B5;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     border: none;
@@ -20,16 +55,28 @@
     bottom: 30px;
     right: 30px;
     transition: 0.5s cubic-bezier(1, -0.64, 0.56, 1.47); }
-    .display-container .needs-item:nth-of-type(1).active {
-      transform: translate(-265px, -150px); }
-    .display-container .needs-item:nth-of-type(2).active {
-      transform: translate(-245px, -230px); }
-    .display-container .needs-item:nth-of-type(3).active {
-      transform: translate(-210px, -310px); }
-    .display-container .needs-item:nth-of-type(4).active {
-      transform: translate(-165px, -400px); }
-    .display-container .needs-item:nth-of-type(5).active {
-      transform: translate(-90px, -490px); }
+    .display-container .needs-item:nth-of-type(1) {
+      background-image: url("assets/images/physiological/air-icon.png"); }
+      .display-container .needs-item:nth-of-type(1).active {
+        transform: translate(-250px, -110px); }
+    .display-container .needs-item:nth-of-type(2) {
+      background-image: url("assets/images/physiological/moon-icon.png"); }
+      .display-container .needs-item:nth-of-type(2).active {
+        transform: translate(-210px, -210px); }
+    .display-container .needs-item:nth-of-type(3) {
+      background-image: url("assets/images/physiological/heart-beat.png"); }
+      .display-container .needs-item:nth-of-type(3).active {
+        transform: translate(-240px, -340px); }
+    .display-container .needs-item:nth-of-type(4) {
+      background-image: url("assets/images/physiological/water-icon.png"); }
+      .display-container .needs-item:nth-of-type(4).active {
+        height: 70px;
+        width: 70px;
+        transform: translate(-215px, -450px); }
+    .display-container .needs-item:nth-of-type(5) {
+      background-image: url("assets/images/physiological/food-icon.png"); }
+      .display-container .needs-item:nth-of-type(5).active {
+        transform: translate(-20px, -500px); }
 
 .fabs-container {
   box-sizing: border-box;
@@ -44,10 +91,23 @@
   width: 100%;
   height: 100%; }
 
+.fabs-wrapper {
+  position: absolute;
+  background: rgba(140, 194, 201, 0.28);
+  width: 21%;
+  height: 76px;
+  right: 3%;
+  bottom: 19px;
+  border-radius: 40px;
+  transition: all 0.3s; }
+  .fabs-wrapper.open {
+    transition: all 0.2s;
+    width: 94%; }
+
 .main-fab {
-  background-color: #3E87B5;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background-image: url("assets/images/button-big.png");
   bottom: 20px;
+  background-size: cover;
   border-radius: 50%;
   height: 70px;
   position: absolute;
@@ -56,9 +116,9 @@
   z-index: 2; }
 
 .fab-satellite {
-  background-color: #112633;
+  background-color: transparent;
+  background-size: cover;
   border-radius: 50%;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   bottom: 35px;
   border: none;
   height: 44px;
@@ -68,16 +128,26 @@
   transition: 0.5s cubic-bezier(0.67, 0.02, 0.02, 0.97);
   width: 44px;
   z-index: 1; }
-  .fab-satellite:nth-of-type(1).open {
-    right: 100px; }
-  .fab-satellite:nth-of-type(2).open {
-    right: 150px; }
-  .fab-satellite:nth-of-type(3).open {
-    right: 200px; }
-  .fab-satellite:nth-of-type(4).open {
-    right: 250px; }
-  .fab-satellite:nth-of-type(5).open {
-    right: 300px; }
+  .fab-satellite:nth-of-type(1) {
+    background-image: url("assets/images/stage-1.png"); }
+    .fab-satellite:nth-of-type(1).open {
+      right: 100px; }
+  .fab-satellite:nth-of-type(2) {
+    background-image: url("assets/images/stage-2.png"); }
+    .fab-satellite:nth-of-type(2).open {
+      right: 150px; }
+  .fab-satellite:nth-of-type(3) {
+    background-image: url("assets/images/stage-3.png"); }
+    .fab-satellite:nth-of-type(3).open {
+      right: 200px; }
+  .fab-satellite:nth-of-type(4) {
+    background-image: url("assets/images/stage-4.png"); }
+    .fab-satellite:nth-of-type(4).open {
+      right: 250px; }
+  .fab-satellite:nth-of-type(5) {
+    background-image: url("assets/images/stage-5.png"); }
+    .fab-satellite:nth-of-type(5).open {
+      right: 300px; }
 
 .severity-low {
   width: 44px;
@@ -93,3 +163,6 @@
   width: 60px;
   height: 60px;
   background-color: rgba(220, 0, 0, 0.8); }
+
+.display-physiological {
+  background-image: url("assets/images/physiological/background-image.png"); }
