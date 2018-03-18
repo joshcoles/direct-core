@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NeedsList from '../needs_list_view/needs-list-view';
+import NeedsList from '../needs_list_view/admin-user-needs-list-view';
 import SubNeedsList from '../needs_list_view/sub-needs-list-view';
 
 const needs = [
