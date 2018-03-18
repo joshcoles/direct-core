@@ -1,0 +1,106 @@
+.admin_user{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 16px;
+    
+    .admin_user_view{
+        display: flex;
+        flex-wrap: wrap;
+        
+        
+        .stat{
+            width: (100%/3);
+            text-align: center;
+            
+            .stat_level{
+                width: 150px;
+                height: 150px;
+                margin: 0 auto 5px;
+                background-color: lightgray;
+                border-radius: 50%;
+            }
+            .stat_label{
+                
+            }
+            
+            margin-bottom: 30px;
+        }
+    }
+    
+    .admin_user_navbar{
+        align-self: flex-start;
+        padding-top: 30px;
+        border-left: 1px solid lightgray;
+        min-height: 100vh;
+        .user_info{
+            text-align: center;
+            
+            .user_avatar{
+                position: relative;
+                
+                img{
+                    border: 3px solid black;
+                    border-radius: 6px;
+                }
+                
+                .user_stat{
+                    position: absolute;
+                    top: 10px;
+                    right: 20%;
+                    background-color: #ef4545;
+                    border-radius: 50%;
+                    width: 25px;
+                    height: 25px;
+                    box-shadow: 1px 1px 0px grey;
+                }
+            }
+            .user_name{
+                margin-top: 10px; 
+                margin-bottom: 10px; 
+            }
+            .user_age{
+                margin-bottom: 10px; 
+            }
+            
+            
+        }
+        .needs_list{
+            margin-top: 30px;
+            
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                
+                li{
+                    width: 80%;
+                    margin: 0 auto;
+                    text-align: center;
+                    border: 1px solid;
+                    padding: 8px 10px;
+                    margin-bottom: 10px;
+                    border-radius: 20px;
+                    background-color: lightgray;
+                    border-color: lightgray;
+                    color: black;
+//                    text-shadow: 1px 1px 5px white;
+                    box-shadow: 1px 1px 2px black;
+                    
+                    text-transform: uppercase;
+                    
+                    &.active, &:hover, &:active, &:focus{
+                        background-color: gray;
+                        border-color: gray;
+                        color: white;
+                        cursor: pointer;
+                    }
+                    
+                    span{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
