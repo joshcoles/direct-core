@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import PhysiologicalItems from './physiological-items/physiological-items';
-import waterImage from '../../../../assets/images/physiological/water-intake.png';
 import timeStamp from '../../../../assets/images/physiological/time.png';
 import pageTitle from '../../../../assets/images/physiological/page-title.png';
+
+import waterImage from '../../../../assets/images/physiological/water-intake.png';
+import foodImage from '../../../../assets/images/physiological/food-intake.png';
+import reproductionImage from '../../../../assets/images/physiological/reproduction.png';
+import airImage from '../../../../assets/images/physiological/air.png';
+import sleepImage from '../../../../assets/images/physiological/sleep.png';
 
 
 class Physiological extends Component {
@@ -30,13 +35,23 @@ class Physiological extends Component {
       modal: true,
       image: event.target.id
     });
+    setTimeout(() => {
+      this.setState({
+        imageVisable: true
+      })
+    }, 100);
   }
 
   closeModal() {
     this.setState({
-      modal: false,
       imageVisable: false
-    });
+    })
+    setTimeout(() => {
+      this.setState({
+        modal: false,
+        imageVisable: false
+      });
+    }, 1000);
   }
 
   setImage(activeCategory) {
@@ -47,7 +62,8 @@ class Physiological extends Component {
 
   render() {
       let classes = this.props.data.classes;
-    
+      let imageClasses = this.state.imageVisable ? 'visible' : '';
+
       return (
         <div className="user">
         <img src={timeStamp} className='timestamp'/>
@@ -57,11 +73,20 @@ class Physiological extends Component {
           this.state.modal && 
           <div className="modal" onClick={this.closeModal}>
             {
-              this.state.image === 'Reproduction' && <img src={waterImage} />
+              this.state.image === 'Reproduction' && <img src={reproductionImage} className={imageClasses}/>
             }
             {
-              this.state.image === 'Sleep' && <img src={waterImage} />
+              this.state.image === 'Water' && <img src={waterImage} className={imageClasses}/>
             }          
+            {
+              this.state.image === 'Food' && <img src={foodImage} className={imageClasses}/>
+            }
+            {
+              this.state.image === 'Sleep' && <img src={sleepImage} className={imageClasses}/>
+            }
+            {
+              this.state.image === 'Air' && <img src={airImage} className={imageClasses} />
+            }
           </div>
         
           }

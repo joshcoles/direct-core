@@ -49,7 +49,9 @@ class Report extends Component {
         break;
       default: 
         return (
-          <Landing />
+          <Landing 
+          data={this.props.data}
+          homepageVisible={this.props.homepageVisible}/>
         )
     }
   }

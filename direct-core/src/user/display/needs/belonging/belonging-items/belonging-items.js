@@ -4,7 +4,10 @@ const belongingItems = (props) => (
 
   <button
     className={props.colorClass}
-    id={props.category} ></button>
+    id={props.category} 
+    onClick={props.insertModal}
+    >
+    </button>
     
 );
 

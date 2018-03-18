@@ -3,13 +3,33 @@ import FabSatellite from './fab-satellite/fab-satellite';
 
 class Fabs extends Component {
 
-  render() {
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      fabVisible: false
+    }
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        fabVisible: true
+      });
+    }, 100);
+  }
+
+  render() {
+    let currentActive = this.props.data.currentNeed;
+
+    let fabsClasses = `fabs ${this.state.fabVisible ? 'visible' : ''}`
     let fabClasses = `fab-satellite nav-fab ${this.props.data.fabDrawerIsOpen ? 'open' : ''}`;
     let backgroundClasses = `fabs-wrapper ${this.props.data.fabDrawerIsOpen ? 'open' : ''}`;
 
+
     return (
-      <div className="fabs">
+      <div className={fabsClasses}>
         <div className={backgroundClasses}></div>
           <div className="main-fab" onClick={this.props.resetCurrentNeed} ></div>
             {

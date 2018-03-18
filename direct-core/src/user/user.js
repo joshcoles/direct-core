@@ -11,6 +11,7 @@ class User extends Component {
     this.state = {
       currentNeed: '',
       fabDrawerIsOpen: false,
+      homepageVisible: false,
       needs: [
       {
         name: 'physiological',
@@ -40,7 +41,6 @@ class User extends Component {
       ]
     }
   }
-
   
   resetCurrentNeed = (e) => {
     e.preventDefault();
@@ -80,13 +80,21 @@ class User extends Component {
     });
   }
 
+  activateHomeScreen = () => {
+    setTimeout(() => {
+      this.setState({
+        homepageVisible: true
+      });
+    }, 5000);
+  }
+
   activateButtons = () => {
     setTimeout(() => {
       this.setState({
         needs: [
           {
             name: 'physiological',
-            items: ["Air", "Water", "Food", "Sleep", "Reproduction"],
+            items: ["Air", "Sleep", "Food", "Water", "Reproduction"],
             classes: 'needs-item active'
           },
           {
@@ -157,7 +165,8 @@ class User extends Component {
         <div className="display-container">
           <Display 
           data={this.state}
-          activateButtons={this.activateButtons.bind(this)}/>
+          activateButtons={this.activateButtons.bind(this)}
+          homepageVisible={this.activateHomeScreen.bind(this)}/>
         </div>
         <div className="fabs-container">
           <Fabs 

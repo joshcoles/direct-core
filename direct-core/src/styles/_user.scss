@@ -1,3 +1,23 @@
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
 .user {
   display: flex;
   flex-direction: column;
@@ -9,6 +29,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  img {
+    opacity: 0;
+    transition: all 4s;
+    &.visible {
+      opacity: 1;
+      transition: all 4s;
+    }
+  }
 }
 .modal {
   position: absolute;
@@ -26,11 +54,17 @@
   img {
     max-width: 80%;
     height: auto;
-    transition: all 1.2s;
+    transition: all 0.5s;
+    opacity: 0;
+    &.visible {
+      opacity: 1;
+      transition: all 0.5s;
+    }
   }
 }
 
-.timestamp {
+.timestamp,
+.location {
   position: absolute;
   left: 20px;
   top: 20px;
@@ -41,55 +75,113 @@
   right: 20px;
   top: 0;
 }
+.blue-circle {
+  position: absolute;
+  top: calc(50% - 162px);
+  left: calc(50% - 162px);
+}
 
 .display-container {
   height: 100%;
   .user-display {
     height: 100%;
   }
-  .needs-item {
-    background-size: cover;
-    background-color: transparent;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    border: none;
-    outline: none;;
-    bottom: 30px;
-    right: 30px;
-    transition: 0.5s cubic-bezier(1, -0.64, .56, 1.47);
-    &:nth-of-type(1) {
-      background-image: url('assets/images/physiological/air-icon.png');
-      &.active {
-        transform: translate(-250px, -110px);
+  .display-physiological {
+    .needs-item {
+      background-size: cover;
+      background-color: transparent;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      border: none;
+      outline: none;
+      bottom: 30px;
+      right: 30px;
+      transition: 0.5s cubic-bezier(1, -0.64, .56, 1.47);
+      &:nth-of-type(1) {
+        background-image: url('assets/images/physiological/air-icon.png');
+        &.active {
+          transform: translate(-250px, -110px);
+        }
+      }
+      &:nth-of-type(2) {
+        background-image: url('assets/images/physiological/moon-icon.png');
+        &.active {
+          transform: translate(-210px, -210px);
+        }
+      }
+      &:nth-of-type(3) {
+        background-image: url('assets/images/physiological/heart-beat.png');
+        &.active {
+          transform: translate(-240px, -340px);
+        }
+      }
+      &:nth-of-type(4) {
+        background-image: url('assets/images/physiological/water-icon.png');
+        &.active {
+          height: 70px;
+          width: 70px;
+          left: 60px;
+          bottom: 470px;        
+          animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) infinite;
+          transform: translate3d(0, 0, 0);
+          backface-visibility: hidden;
+        }
+      }
+      &:nth-of-type(5) {
+        background-image: url('assets/images/physiological/food-icon.png');
+        &.active {
+          transform: translate(-20px, -500px);
+        }
       }
     }
-    &:nth-of-type(2) {
-      background-image: url('assets/images/physiological/moon-icon.png');
-      &.active {
-        transform: translate(-210px, -210px);
+  }
+  .display-belonging {
+    .needs-item {
+      background-size: cover;
+      background-color: transparent;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      border: none;
+      outline: none;
+      bottom: 30px;
+      right: 30px;
+      transition: 0.5s cubic-bezier(1, -0.64, .56, 1.47);
+      &:nth-of-type(1) {
+        background-image: url('assets/images/belonging/green-picture.png');
+        &.active {
+          transform: translate(-170px, -220px);
+        }
       }
-    }
-    &:nth-of-type(3) {
-      background-image: url('assets/images/physiological/heart-beat.png');
-      &.active {
-        transform: translate(-240px, -340px);
+      &:nth-of-type(2) {
+        background-image: url('assets/images/belonging/yellow-picture.png');
+        &.active {
+          transform: translate(-260px, -360px);
+        }
       }
-    }
-    &:nth-of-type(4) {
-      background-image: url('assets/images/physiological/water-icon.png');
-      &.active {
-        height: 70px;
-        width: 70px;
-        transform: translate(-215px, -450px);
+      &:nth-of-type(3) {
+        background-image: url('assets/images/belonging/red-picture.png');
+        &.active {
+          height: 70px;
+          width: 70px;
+          left: 240px;
+          bottom: 440px;
+          transform: translate(-240px, -340px);
+          animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) infinite;
+          transform: translate3d(0, 0, 0);
+          backface-visibility: hidden;
+        }
       }
-    }
-    &:nth-of-type(5) {
-      background-image: url('assets/images/physiological/food-icon.png');
-      &.active {
-        transform: translate(-20px, -500px);
+      &:nth-of-type(4) {
+        background-image: url('assets/images/belonging/golden-picture.png');
+        &.active {
+          transform: translate(-20px, -190px);
+        }
       }
     }
   }
