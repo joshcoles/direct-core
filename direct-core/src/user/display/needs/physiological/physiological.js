@@ -73,13 +73,13 @@ class Physiological extends Component {
           this.state.modal && 
           <div className="modal" onClick={this.closeModal}>
             {
-              this.state.image === 'Reproduction' && <img src={reproductionImage} className={imageClasses}/>
+              this.state.image === 'Reproduction' && <img src={foodImage} className={imageClasses}/>
             }
             {
               this.state.image === 'Water' && <img src={waterImage} className={imageClasses}/>
             }          
             {
-              this.state.image === 'Food' && <img src={foodImage} className={imageClasses}/>
+              this.state.image === 'Food' && <img src={reproductionImage} className={imageClasses}/>
             }
             {
               this.state.image === 'Sleep' && <img src={sleepImage} className={imageClasses}/>
