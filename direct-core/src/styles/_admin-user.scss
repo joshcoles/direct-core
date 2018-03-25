@@ -1,0 +1,148 @@
+.admin_user{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 16px;
+    background-image: url('assets/images/background2x.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left -100px;
+    
+    .admin_user_view{
+        display: flex;
+        flex-wrap: wrap;
+        
+        .stat{
+            width: (100%/2);
+            text-align: center;
+            margin-bottom: 80px;
+            
+            &.low_stat{
+                width: 60%;
+                margin-left: auto;
+                
+                .stat_level{
+                    margin-top: 10px;
+                    width: 160px;
+                    height: 160px;
+                }
+                
+                .stat_label{
+                    margin-top: -120px;
+                    
+                    .stat_title{
+                        color: $low-stat-color;
+                        font-size: 16px;
+                    }
+                    .stat_info{
+                        font-size: 3em;
+                    }
+                }
+            }
+            
+            .stat_level{
+                width: 125px;
+                height: 125px;
+                margin: 0 auto;
+                border-radius: 50%;
+            }
+            .stat_label{
+                margin-top: -90px;
+                
+                .stat_title{
+                    color: $blue;
+                    font-size: 12px;
+                }
+                .stat_info{
+                    font-size: 2em;
+                    line-height: 1em;
+                    color: white;
+                }
+            }
+        }
+    }
+    
+    .admin_user_navbar{
+        align-self: flex-start;
+        padding-top: 30px;
+        border-left: 1px solid white;
+        min-height: 100vh;
+        height: 100%;
+        color: white;
+        clear: both;
+        
+        .user_info{
+            text-align: center;
+            
+            .user_avatar{
+                background-image: url('assets/images/user_avatar.jpg');
+                background-size: cover;
+                
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+                border-radius: 50%;
+                
+//                .user_stat{
+//                    position: absolute;
+//                    top: 10px;
+//                    right: 20%;
+//                    background-color: #ef4545;
+//                    border-radius: 50%;
+//                    width: 25px;
+//                    height: 25px;
+//                    box-shadow: 1px 1px 0px grey;
+//                }
+            }
+            .user_name{
+                margin-top: 10px; 
+                margin-bottom: 10px; 
+            }
+            .user_age{
+                margin-bottom: 10px; 
+            }
+        }
+        .needs_list{
+            margin-top: 30px;
+            
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                
+                li{
+                    width: 80%;
+                    margin: 0 auto;
+                    text-align: center;
+                    border: 1px solid;
+                    padding: 8px 10px;
+                    margin-bottom: 20px;
+                    border-radius: 20px;
+                    background-color: $active-need-color;
+                    border-color: $active-need-color;
+                    color: white;
+                    
+                    text-transform: uppercase;
+                    
+                    &.active{
+                        background-color: $low-stat-color;
+                        border-color: $low-stat-color;
+                        color: white;
+                        cursor: pointer;
+                    }
+                    
+//                    &:hover, &:active, &:focus{
+//                        background-color: midnightblue;
+//                        border-color: midnightblue;
+//                        color: white;
+//                        cursor: pointer;
+//                    }
+                    
+                    span{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
