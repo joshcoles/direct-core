@@ -3,4 +3,4 @@
 
 Thank you [Create React App](https://github.com/facebookincubator/create-react-app)!
 
-![Logo](src/assets/readme-screenshots/stage-1.png)
+![Logo](direct-core/src/assets/readme-screenshots/stage-1.png)
